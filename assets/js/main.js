@@ -133,7 +133,7 @@ const I18N = {
     "cap.num": "Direction",
     "cap.title1": "RNCP 39774",
     "cap.title2": "the outcome of my training.",
-    "cap.intro": "The <strong>RNCP 39774</strong> certification — Expert en architecture informatique — is the outcome of my training. It corresponds to a master's-level qualification and structures my path around architecture, data and deployment.",
+    "cap.intro": "The RNCP 39774 certification is the title I am aiming for at the end of my training. It corresponds to a master's-level qualification and gives a clear framework for the rest of my path.",
     "cap.badge": "Specialization track",
     "cap.feature.h": "The outcome of my training",
     "cap.feature.p": "I am aiming for <strong>RNCP 39774</strong> as the conclusion of my training, with a structured progression around architecture, data and AI integration.",
