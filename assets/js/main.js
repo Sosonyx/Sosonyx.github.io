@@ -2,175 +2,303 @@
 const I18N = {
   fr: {
     "nav.parcours": "Parcours",
-    "nav.apprendre": "Apprendre",
+    "nav.ecole42": "42",
     "nav.cap": "Cap",
     "nav.projets": "Projets",
+    "nav.apprendre": "Apprendre",
     "nav.contact": "Contact",
+
     "hero.eyebrow": "Portfolio — 2026",
-    "hero.ribbon": "du terrain à l’apprentissage du code",
-    "hero.line1": "De la rigueur",
-    "hero.line2": "au service d’un apprentissage sérieux.",
-    "hero.sub": "Ilies Hadj — développeur junior en formation à 42 Paris, avec un parcours en maintenance aéronautique puis dans l'Armée de Terre.",
-    "hero.tag": "Je travaille surtout sur C, C++ et les bases des systèmes. J’essaie de comprendre avant d’aller vite, et de garder des projets simples et propres.",
+    "hero.ribbon": "du terrain au code, sans raccourci",
+    "hero.avail": "Open to work",
+    "hero.line1": "De la rigueur du terrain,",
+    "hero.line2": "à la précision du code.",
+    "hero.sub": "Après cinq années dans l’aéronautique au sein de l’Armée de Terre, j’ai fait le choix de me tourner vers le code.",
+    "hero.tag": "Pour aller au fond des concepts de la programmation, j’ai choisi de repartir des bases en intégrant 42 Paris. À travers le C et le C++, je renforce mes compétences et développe des réflexes ancrés dans le fonctionnement réel des systèmes.",
     "hero.42.link": "Découvrir 42",
     "hero.cta.projects": "Voir mes projets",
     "hero.cta.contact": "Me contacter",
     "hero.scroll": "Faites défiler",
+
     "parcours.num": "Parcours",
-    "parcours.title1": "Un parcours",
-    "parcours.title2": "pas tout à fait direct.",
-    "parcours.intro": "Mon parcours n’est pas linéaire : j’ai d’abord travaillé en maintenance aéronautique puis dans l’Armée de Terre. Ça m’a appris la rigueur, le travail d’équipe et le fait de rester calme quand il faut corriger vite.",
-    "p.a.date": "Avril 2025 - Actuellement",
+    "parcours.title1": "Deux expériences,",
+    "parcours.title2": "une même exigence.",
+    "parcours.intro": "Ce qui relie le terrain au code, c'est la même logique : comprendre avant d'agir, tenir dans la durée, ne pas prendre de raccourcis.",
+
+    "s42.num": "42 Paris",
+    "s42.title1": "Une école",
+    "s42.title2": "à part.",
+    "s42.intro": "Fondée en 2013 à Paris par Xavier Niel, 42 s'est exportée dans le monde entier. Pas de cours magistraux, pas de professeurs — l'apprentissage se construit par les projets et entre pairs.",
+    "s42.stat1.num": "50+",
+    "s42.stat1.label": "campus dans le monde",
+    "s42.stat2.num": "170k+",
+    "s42.stat2.label": "apprenants formés depuis 2013",
+    "s42.stat3.num": "0",
+    "s42.stat3.label": "professeur — pair à pair",
+    "s42.stat4.num": "Bac+5",
+    "s42.stat4.label": "certification RNCP reconnue par l'État",
+    "s42.note": "Admissions sur test (La Piscine), sans condition de diplôme. Gratuit.",
+
+    "p.a.date": "Avril 2025 — aujourd'hui",
     "p.a.title": "42 Paris — Formation au développement logiciel",
-    "p.a.place": "42 Paris — Paris, France",
-    "p.a.desc": "Apprentissage du C et du C++ à travers plusieurs projets : mémoire, concurrence, parsing, logique bas niveau. Je progresse encore beaucoup par essais, corrections et relectures.",
-    "p.b.date": "Juin 2022 - Décembre 2022",
-    "p.b.title": "Technicien de maintenance aéronautique",
-    "p.b.place": "Centre de formation franco-allemand (CFA PTL TIGRE) — Faßberg, Allemagne",
-    "p.b.desc": "Formation technique en maintenance aéronautique, dans un contexte international. J’y ai appris la précision et l’habitude de suivre une procédure propre.",
-    "p.c.date": "Mars 2020 - Mars 2025",
-    "p.c.title": "Sous-officier de l'Armée de Terre",
+    "p.a.desc": "Formation au C et au C++ : gestion mémoire, concurrence, parsing, programmation bas niveau. J'apprends projet par projet, en essayant d'écrire un code propre et de bien comprendre ce que je produis.",
+
+    "p.c.date": "Mars 2020 — Mars 2025",
+    "p.c.title": "Sous-officier — Armée de Terre",
     "p.c.place": "École Nationale des Sous-Officiers d'Active — Saint-Maixent-l'École, France",
-    "p.c.desc": "Expérience de terrain centrée sur la discipline, la coordination et la prise de décision sous pression.",
+    "p.c.desc": "Cinq années d'encadrement opérationnel : conduite d'équipe, décision sous pression, coordination inter-services.",
+
+    "p.b.date": "Juin 2022 — Décembre 2022",
+    "p.b.title": "Spécialisation maintenance aéronautique",
+    "p.b.place": "Centre de formation franco-allemand (CFA PTL TIGRE) — Faßberg, Allemagne · dans le cadre du service militaire",
+    "p.b.desc": "Formation technique en maintenance aéronautique, dans un cadre militaire franco-allemand.",
+
     "p.d.date": "Juin 2019",
-    "p.d.title": "Baccalauréat — Scientifique, spécialité mathématiques",
+    "p.d.title": "Baccalauréat scientifique — spécialité mathématiques",
     "p.d.place": "Lycée Privé Polyvalent La Trinité — Béziers, France",
-    "p.d.desc": "Baccalauréat scientifique avec une base solide en mathématiques, utile pour la suite.",
-    "app.num": "Apprendre",
-    "app.title1": "Apprendre",
-    "app.title2": "à l’ère des outils d’IA.",
-    "app.intro": "J’essaie d’avancer simplement : comprendre d’abord, demander de l’aide quand c’est utile, et éviter d’aller trop vite sur ce que je ne maîtrise pas encore.",
-    "app.q1": "Je fais attention à ne pas utiliser l’IA comme un raccourci systématique. Des travaux du MIT Media Lab montrent qu’un usage passif peut réduire l’engagement cognitif, et une étude Microsoft &amp; Carnegie Mellon souligne aussi que la confiance excessive peut diminuer l’esprit critique.",
-    "app.q2": "Pour moi, l’IA reste surtout un outil de vérification et de discussion. Je code d’abord, je lis ensuite ce que j’ai produit, et je cherche à comprendre mes erreurs avant d’aller plus loin.",
-    "app.q3": "C’est plus lent, mais ça m’aide à apprendre pour de vrai.",
-    "app.src.label": "Références",
+    "p.d.desc": "Baccalauréat scientifique, spécialité mathématiques.",
+
     "cap.num": "Cap",
-    "cap.title1": "RNCP 39774",
-    "cap.title2": "la finalité de ma formation.",
-    "cap.intro": "La certification RNCP 39774 est la finalité de ma formation. Elle valide un niveau bac +5.",
+    "cap.title1": "Spécialisation",
+    "cap.title2": "IA &amp; data.",
+    "cap.intro": "Mon cursus à 42 se prolonge par une spécialisation en intelligence artificielle et data science, certifiée <strong>RNCP 39774</strong> (niveau bac +5).",
     "cap.badge": "Cursus de spécialisation",
-    "cap.feature.h": "La finalité de ma formation",
-    "cap.feature.p": "Je vise le RNCP 39774 comme aboutissement de ma formation, dans un cursus structuré.",
-    "cap.link": "Voir la certification RNCP 39774",
-    "cap.card1.h": "Dans mon cursus de spécialisation",
-    "cap.card1.p": "Je vais faire des projets qui relient ML, data et intégration d’IA, avec une progression simple et concrète.",
+    "cap.feature.h": "Des systèmes bas niveau à l'IA appliquée.",
+    "cap.feature.p": "Après les bases en C/C++ et en programmation système, je m'oriente vers des projets qui relient machine learning, préparation de données et intégration d'IA, de la théorie au déploiement.",
+    "cap.link": "Détail de la certification RNCP 39774",
+    "cap.card1.h": "Piliers du cursus",
+    "cap.card1.p": "ML, pipelines de données et intégration de modèles dans des applications concrètes, au fil de projets progressifs et concrets.",
     "cap.card2.h": "Leaffliction",
-    "cap.card2.p": "Un projet de classification d’images pour travailler la préparation des données et l’entraînement d’un premier modèle.",
+    "cap.card2.p": "Classification d'images par réseau convolutif : préparation du dataset, augmentation, entraînement et évaluation d'un modèle de vision.",
     "cap.card3.h": "Multilayer Perceptron",
-    "cap.card3.p": "Un réseau de neurones simple pour comprendre l’apprentissage supervisé et les bases de l’optimisation.",
+    "cap.card3.p": "Réseau de neurones construit from scratch : forward pass, backprop, descente de gradient, pour comprendre l'optimisation avant d'utiliser les frameworks.",
+
     "pr.num": "Projets",
     "pr.title1": "Ce que",
-    "pr.title2": "j’ai construit.",
-    "pr.intro": "Quelques projets de 42 qui m’ont surtout appris à mieux comprendre le C, les systèmes et les bases du web.",
-    "pr.webserv": "Un serveur HTTP/1.1 écrit en C++ : GET, POST, DELETE, CGI et gestion de plusieurs clients. C’est un projet qui m’a surtout appris à mieux lire la RFC et à garder un code propre malgré la complexité.",
-    "pr.inception": "Mise en place de services (Nginx, WordPress, MariaDB) avec Docker. J’y ai appris à configurer un environnement complet, à comprendre les volumes et à gérer le réseau.",
-    "pr.minishell": "Un shell proche de bash : parsing, redirections, pipes, variables d’environnement et signaux. Un bon exercice pour comprendre comment un système Unix se comporte.",
-    "pr.philo": "Le dîner des philosophes en C avec threads et mutex. Le but ici était surtout de comprendre la synchronisation et d’éviter les blocages.",
+    "pr.title2": "j'ai construit.",
+    "pr.intro": "Quelques projets de 42 sur lesquels je travaille actuellement : systèmes, concurrence, HTTP, conteneurs.",
+    "pr.webserv": "Serveur HTTP/1.1 en C++ : GET, POST, DELETE, CGI, gestion de plusieurs clients. Un projet d'équipe qui m'a beaucoup appris sur la lecture des RFC et sur l'organisation d'un code qui reste lisible malgré la complexité.",
+    "pr.webserv.c1.h": "Trello board",
+    "pr.webserv.c1.p": "Organisation en sprints et tickets partagés entre les membres de l'équipe.",
+    "pr.webserv.c2.h": "State machine",
+    "pr.webserv.c2.p": "Les connexions HTTP sont gérées via une machine à états claire et explicite.",
+    "pr.webserv.c3.h": "Complexité cyclomatique",
+    "pr.webserv.c3.p": "Accord d'équipe pour limiter la complexité par fonction et garder le code maintenable.",
+    "pr.webserv.c4.h": "Scalabilité",
+    "pr.webserv.c4.p": "Architecture pensée pour intégrer de nouveaux modules sans tout reconstruire.",
+    "pr.inception": "Infrastructure conteneurisée : Nginx (TLS), WordPress (PHP-FPM) et MariaDB orchestrés via Docker Compose. Volumes persistants, réseau isolé, images reproductibles.",
+    "pr.minishell": "Shell Unix en C : parsing, redirections, pipes, expansion de variables, gestion des signaux et builtins. Un bon exercice pour se familiariser avec les appels système et le cycle de vie des processus.",
+    "pr.minishell.c1.h": "AST",
+    "pr.minishell.c1.p": "Le parsing construit un arbre syntaxique abstrait qui représente la commande avant son exécution.",
+    "pr.philo": "Le problème du dîner des philosophes en C, avec threads et mutex. Un bon support pour s'entraîner à la synchronisation et éviter les blocages.",
     "pr.see": "Voir sur GitHub",
+
+    "app.num": "Apprendre",
+    "app.title1": "Ma manière",
+    "app.title2": "d'apprendre.",
+    "app.intro": "À 42, on apprend par la pratique et en allant chercher les réponses. L'IA est un outil puissant et je l'utilise — mais pendant la phase d'apprentissage, j'essaie de faire attention à la façon dont je m'en sers.",
+    "app.q1.h": "L'IA, surtout pour comprendre.",
+    "app.q1.p": "Je m'en sers pour reformuler un concept, comparer des approches ou décoder un message d'erreur. Pour le code lui-même, quand c'est un sujet que je suis en train d'apprendre, je préfère l'écrire moi-même.",
+    "app.q2.h": "Croiser avec la doc.",
+    "app.q2.p": "RFC, <em>man</em> pages, documentation officielle : j'y retourne régulièrement. L'IA répond vite, la doc répond juste; je m'appuie sur les deux selon mes besoins.",
+    "app.q3.h": "Comprendre ce que je commit.",
+    "app.q3.p": "J'essaie de pouvoir expliquer chaque ligne de mon code. Quand j'hésite sur une suggestion, je relis la doc ou je prends le temps de comprendre comment elle fonctionne avant de l'intégrer.",
+    "app.sources.label": "Mes références au quotidien :",
+
     "sk.num": "Compétences",
     "sk.title1": "Des outils,",
     "sk.title2": "et une manière de travailler.",
     "sk.lang.h": "Langages",
+    "sk.lang.tag": "noyau",
     "sk.tools.h": "Outils",
-    "sk.core.h": "Programmation & architecture",
-    "sk.core.v": "Algorithmes · gestion mémoire · concurrence · debugging",
+    "sk.tools.tag": "quotidien",
+    "sk.core.h": "Programmation &amp; architecture",
+    "sk.core.tag": "fondamentaux",
+    "sk.core.c1": "Gestion mémoire",
+    "sk.core.c2": "Concurrence &amp; threads",
+    "sk.core.c3": "Algorithmes &amp; structures",
+    "sk.core.c4": "Debugging (gdb, valgrind)",
+    "sk.core.c5": "Parsing &amp; protocoles",
     "sk.soft.h": "Qualités de travail",
-    "sk.soft.v": "Autonomie · rigueur · curiosité · travail en équipe",
+    "sk.soft.tag": "posture",
+    "sk.soft.c1": "Autonomie",
+    "sk.soft.c2": "Rigueur opérationnelle",
+    "sk.soft.c3": "Curiosité technique",
+    "sk.soft.c4": "Travail en équipe",
     "sk.langs.h": "Langues",
-    "sk.langs.v": "Français (natif) · Anglais B2 — TOEIC 890 · Espagnol A2",
+    "sk.langs.tag": "à l'écrit &amp; à l'oral",
+    "sk.langs.fr": "Français",
+    "sk.langs.fr.lvl": "natif",
+    "sk.langs.en": "Anglais",
+    "sk.langs.es": "Espagnol",
     "sk.other.h": "À côté du code",
-    "sk.other.v": "Escalade · piano · judo (ceinture marron) · permis B",
+    "sk.other.tag": "équilibre",
+    "sk.other.c1": "Escalade",
+    "sk.other.c2": "Piano",
+    "sk.other.c3": "Judo · ceinture marron",
+    "sk.other.c4": "Permis B",
+    "sk.lvl.solid": "solide",
+    "sk.lvl.learn": "en cours",
+    "sk.lvl.use": "utilisé",
+    "sk.lvl.daily": "quotidien",
+
     "ct.num": "Contact",
     "ct.title1": "Un poste,",
     "ct.title2": "un stage, <span class=\"accent\">un café ?</span>",
-    "ct.lead": "Je cherche un premier poste ou un stage où je pourrai apprendre sérieusement et contribuer concrètement. Si mon profil vous semble intéressant, écrivez-moi.",
-    "foot": "Fait à la main, à Paris."
+    "ct.lead": "Je cherche un stage, alternance ou un premier poste où je pourrai apprendre sérieusement et contribuer concrètement. Si mon profil vous semble intéressant, écrivez-moi.",
+    "ct.cta.cv": "Télécharger mon CV",
+
+    "foot": "Paris."
   },
   en: {
     "nav.parcours": "Journey",
-    "nav.apprendre": "Learning",
+    "nav.ecole42": "42",
     "nav.cap": "Direction",
     "nav.projets": "Projects",
+    "nav.apprendre": "Learning",
     "nav.contact": "Contact",
+
     "hero.eyebrow": "Portfolio — 2026",
-    "hero.ribbon": "from the field to learning code",
-    "hero.line1": "Practical discipline",
-    "hero.line2": "in service of learning.",
-    "hero.sub": "Ilies Hadj — junior software developer in training at 42 Paris, with a background in avionics maintenance and the French Army.",
-    "hero.tag": "I mainly work on C, C++ and the basics of systems programming. I try to understand first, then move fast, and keep things simple.",
+    "hero.ribbon": "from the field to the code, no shortcuts",
+    "hero.avail": "Open to work",
+    "hero.line1": "From the discipline of the field,",
+    "hero.line2": "to the precision of code.",
+    "hero.sub": "After five years in aeronautics with the French Army, I chose to turn toward code.",
+    "hero.tag": "To go deeper into programming concepts, I chose to return to the basics by joining 42 Paris. Through C and C++, I strengthen my skills and build instincts grounded in how systems really work.",
     "hero.42.link": "Learn more about 42",
     "hero.cta.projects": "See my projects",
     "hero.cta.contact": "Get in touch",
     "hero.scroll": "Scroll",
+
     "parcours.num": "Journey",
-    "parcours.title1": "A path",
-    "parcours.title2": "that was not straight.",
-    "parcours.intro": "My path was not linear: I first worked in avionics maintenance, then in the French Army. Those experiences taught me discipline, teamwork and staying calm when something needs fixing fast.",
-    "p.a.date": "April 2025 - Present",
+    "parcours.title1": "Two experiences,",
+    "parcours.title2": "one same standard.",
+    "parcours.intro": "What connects the field to the code is the same logic: understand before acting, stay the course, take no shortcuts.",
+
+    "s42.num": "42 Paris",
+    "s42.title1": "A school",
+    "s42.title2": "unlike any other.",
+    "s42.intro": "Founded in Paris in 2013 by Xavier Niel, 42 has expanded across the globe. No lectures, no teachers — learning is built through projects and peer collaboration.",
+    "s42.stat1.num": "50+",
+    "s42.stat1.label": "campuses worldwide",
+    "s42.stat2.num": "170k+",
+    "s42.stat2.label": "students trained since 2013",
+    "s42.stat3.num": "0",
+    "s42.stat3.label": "teachers — pure peer learning",
+    "s42.stat4.num": "Bac+5",
+    "s42.stat4.label": "state-recognized RNCP certification",
+    "s42.note": "Admissions by aptitude test (La Piscine), no degree required. Tuition-free.",
+
+    "p.a.date": "April 2025 — present",
     "p.a.title": "42 Paris — Software development training",
-    "p.a.place": "42 Paris — Paris, France",
-    "p.a.desc": "Learning C and C++ through several projects: memory, concurrency, parsing and low-level logic. I still learn a lot through trial, correction and rereading my own code.",
-    "p.b.date": "June 2022 - December 2022",
-    "p.b.title": "Aeronautical Maintenance Technician",
-    "p.b.place": "Franco-German training center (CFA PTL TIGRE) — Faßberg, Germany",
-    "p.b.desc": "Technical training in aeronautical maintenance, in an international setting. It taught me precision and the habit of following a clean procedure.",
-    "p.c.date": "March 2020 - March 2025",
-    "p.c.title": "Army Non-Commissioned Officer",
+    "p.a.desc": "Training in C and C++: memory management, concurrency, parsing, low-level programming. I learn project by project, trying to write clean code and to properly understand what I produce.",
+
+    "p.c.date": "March 2020 — March 2025",
+    "p.c.title": "Non-Commissioned Officer — French Army",
     "p.c.place": "National School of Active NCOs — Saint-Maixent-l'École, France",
-    "p.c.desc": "Field experience focused on discipline, coordination and decision-making under pressure.",
+    "p.c.desc": "Five years of operational leadership: team command, decision-making under pressure, cross-unit coordination.",
+
+    "p.b.date": "June 2022 — December 2022",
+    "p.b.title": "Aeronautical maintenance specialization",
+    "p.b.place": "Franco-German training center (CFA PTL TIGRE) — Faßberg, Germany · as part of military service",
+    "p.b.desc": "Technical training in aeronautical maintenance, in a Franco-German military environment.",
+
     "p.d.date": "June 2019",
-    "p.d.title": "Baccalaureate — Science, mathematics specialization",
+    "p.d.title": "Scientific Baccalaureate — mathematics specialization",
     "p.d.place": "Lycée Privé Polyvalent La Trinité — Béziers, France",
-    "p.d.desc": "Science baccalaureate with a solid math base, which helped me a lot afterwards.",
-    "app.num": "Learning",
-    "app.title1": "Learning",
-    "app.title2": "in the age of AI tools.",
-    "app.intro": "I try to keep a simple approach: understand first, ask for help when it makes sense, and avoid moving too fast on things I do not fully grasp yet.",
-    "app.q1": "I try not to use AI as a shortcut. MIT Media Lab research suggests that passive use can reduce cognitive engagement, and a Microsoft &amp; Carnegie Mellon study also points out that overreliance on AI can weaken critical thinking.",
-    "app.q2": "For me, AI is mainly a tool for checking and discussing ideas. I code first, then I read back what I wrote and try to understand my mistakes before moving on.",
-    "app.q3": "It is slower, but it helps me learn properly.",
-    "app.src.label": "References",
+    "p.d.desc": "Scientific baccalaureate, mathematics specialization.",
+
     "cap.num": "Direction",
-    "cap.title1": "RNCP 39774",
-    "cap.title2": "the outcome of my training.",
-    "cap.intro": "RNCP 39774 is the final objective of my training. It validates a master's-level qualification.",
+    "cap.title1": "Specialization",
+    "cap.title2": "AI &amp; data.",
+    "cap.intro": "My 42 curriculum extends into a specialization in artificial intelligence and data science, certified <strong>RNCP 39774</strong> (master's level).",
     "cap.badge": "Specialization track",
-    "cap.feature.h": "The outcome of my training",
-    "cap.feature.p": "I am aiming for <strong>RNCP 39774</strong> as the completion of my training, within a structured track.",
-    "cap.link": "View RNCP 39774",
-    "cap.card1.h": "In my specialization",
-    "cap.card1.p": "Two key projects to move toward this certification.",
+    "cap.feature.h": "From low-level systems to applied AI.",
+    "cap.feature.p": "After the basics in C/C++ and systems programming, I'm moving toward projects that connect machine learning, data preparation and AI integration, from theory to deployment.",
+    "cap.link": "View RNCP 39774 certification",
+    "cap.card1.h": "Curriculum pillars",
+    "cap.card1.p": "ML, data pipelines and integration of models into real applications, through progressive and concrete projects.",
     "cap.card2.h": "Leaffliction",
-    "cap.card2.p": "Image classification: data preparation and model training.",
+    "cap.card2.p": "Image classification with a convolutional network: dataset prep, augmentation, training and evaluation of a vision model.",
     "cap.card3.h": "Multilayer Perceptron",
-    "cap.card3.p": "Neural network: supervised learning and optimization.",
+    "cap.card3.p": "A neural network built from scratch: forward pass, backprop, gradient descent, to understand optimization before reaching for frameworks.",
+
     "pr.num": "Projects",
     "pr.title1": "What",
     "pr.title2": "I've built.",
-    "pr.intro": "A few 42 projects that mostly taught me C, systems and the basics of the web a bit better.",
-    "pr.webserv": "An HTTP/1.1 server written in C++: GET, POST, DELETE, CGI and multi-client handling. It mostly taught me to read the RFC more carefully and keep the code clean under pressure.",
-    "pr.inception": "Setting up services (Nginx, WordPress, MariaDB) with Docker. I learned how to configure a full environment, understand volumes and handle the network.",
-    "pr.minishell": "A bash-like shell: parsing, redirections, pipes, environment variables and signals. A good exercise for understanding how Unix systems behave.",
-    "pr.philo": "The dining philosophers problem in C with threads and mutexes. The main goal was to understand synchronization and avoid deadlocks.",
+    "pr.intro": "A few 42 projects I'm currently working on: systems, concurrency, HTTP, containers.",
+    "pr.webserv": "HTTP/1.1 server in C++: GET, POST, DELETE, CGI, multi-client handling. A team project that taught me a lot about reading RFCs carefully and organizing code that stays readable despite the complexity.",
+    "pr.webserv.c1.h": "Trello board",
+    "pr.webserv.c1.p": "Organized the project into sprints and shared tickets across team members.",
+    "pr.webserv.c2.h": "State machine",
+    "pr.webserv.c2.p": "HTTP connection handling is managed through a clear, explicit state machine.",
+    "pr.webserv.c3.h": "Cyclomatic complexity",
+    "pr.webserv.c3.p": "Team agreement to cap per-function complexity and keep the codebase maintainable.",
+    "pr.webserv.c4.h": "Scalability",
+    "pr.webserv.c4.p": "Architecture designed to integrate new modules without rewriting existing code.",
+    "pr.inception": "Containerized infrastructure: Nginx (TLS), WordPress (PHP-FPM) and MariaDB orchestrated via Docker Compose. Persistent volumes, isolated network, reproducible images.",
+    "pr.minishell": "A Unix shell in C: parsing, redirections, pipes, variable expansion, signal handling and built-ins. A good exercise for getting comfortable with system calls and process lifecycles.",
+    "pr.minishell.c1.h": "AST",
+    "pr.minishell.c1.p": "Parsing builds an abstract syntax tree that represents the full command before execution.",
+    "pr.philo": "The dining philosophers problem in C, with threads and mutexes. A good playground for practicing synchronization and avoiding deadlocks.",
     "pr.see": "View on GitHub",
+
+    "app.num": "Learning",
+    "app.title1": "How",
+    "app.title2": "I learn.",
+    "app.intro": "At 42, you learn by doing and by going after the answers yourself. AI is a powerful tool and I use it regularly; during the learning phase, I simply try to pay attention to how I use it.",
+    "app.q1.h": "AI, mostly to understand.",
+    "app.q1.p": "I use it to rephrase a concept, compare approaches or decode an error message. On topics I'm currently learning, I prefer to write the code myself, to keep the learning active.",
+    "app.q2.h": "Cross-check with the docs.",
+    "app.q2.p": "RFCs, <em>man</em> pages, official docs: I keep coming back to them. AI answers fast, the docs answer right, and I lean on both depending on what I need.",
+    "app.q3.h": "Understand what I commit.",
+    "app.q3.p": "I try to be able to explain every line of my code. When I'm unsure about a suggestion, I re-read the docs or take the time to understand how it works before integrating it.",
+    "app.sources.label": "My daily references:",
+
     "sk.num": "Skills",
     "sk.title1": "Tools,",
-    "sk.title2": "and the way I work.",
+    "sk.title2": "and a way of working.",
     "sk.lang.h": "Languages",
+    "sk.lang.tag": "core",
     "sk.tools.h": "Tools",
-    "sk.core.h": "Programming & architecture",
-    "sk.core.v": "Algorithms · memory management · concurrency · debugging",
+    "sk.tools.tag": "daily",
+    "sk.core.h": "Programming &amp; architecture",
+    "sk.core.tag": "fundamentals",
+    "sk.core.c1": "Memory management",
+    "sk.core.c2": "Concurrency &amp; threads",
+    "sk.core.c3": "Algorithms &amp; data structures",
+    "sk.core.c4": "Debugging (gdb, valgrind)",
+    "sk.core.c5": "Parsing &amp; protocols",
     "sk.soft.h": "Work habits",
-    "sk.soft.v": "Autonomy · rigor · curiosity · teamwork",
+    "sk.soft.tag": "posture",
+    "sk.soft.c1": "Autonomy",
+    "sk.soft.c2": "Operational rigor",
+    "sk.soft.c3": "Technical curiosity",
+    "sk.soft.c4": "Teamwork",
     "sk.langs.h": "Languages",
-    "sk.langs.v": "French (native) · English B2 — TOEIC 890 · Spanish A2",
+    "sk.langs.tag": "written &amp; spoken",
+    "sk.langs.fr": "French",
+    "sk.langs.fr.lvl": "native",
+    "sk.langs.en": "English",
+    "sk.langs.es": "Spanish",
     "sk.other.h": "Beyond code",
-    "sk.other.v": "Climbing · piano · judo (brown belt) · driver's licence",
+    "sk.other.tag": "balance",
+    "sk.other.c1": "Climbing",
+    "sk.other.c2": "Piano",
+    "sk.other.c3": "Judo · brown belt",
+    "sk.other.c4": "Driver's licence (B)",
+    "sk.lvl.solid": "solid",
+    "sk.lvl.learn": "learning",
+    "sk.lvl.use": "used",
+    "sk.lvl.daily": "daily",
+
     "ct.num": "Contact",
     "ct.title1": "A job,",
-    "ct.title2": "an internship, <span class=\"accent\">a coffee ?</span>",
-    "ct.lead": "I'm looking for a first job or internship where I can learn seriously and contribute concretely. If you think my profile could be a fit, write to me.",
-    "foot": "Handcrafted in Paris."
+    "ct.title2": "an internship, <span class=\"accent\">a coffee?</span>",
+    "ct.lead": "I'm looking for a first role or internship where I can learn seriously and contribute concretely. If my profile resonates, write to me.",
+    "ct.cta.cv": "Download my CV",
+
+    "foot": "Paris."
   }
 };
 
@@ -178,6 +306,35 @@ const SUPPORTED_LANGS = new Set(['fr', 'en']);
 
 function normalizeLang(lang) {
   return SUPPORTED_LANGS.has(lang) ? lang : 'fr';
+}
+
+function splitHeroHeading() {
+  // Wrap each word of the hero H1 in a span, then each char, to animate them.
+  const h1 = document.querySelector('.hero h1');
+  if (!h1) return;
+  h1.querySelectorAll('span[data-i18n]').forEach((span) => {
+    const text = span.textContent;
+    if (!text) return;
+    const words = text.split(/(\s+)/);
+    span.innerHTML = '';
+    let idx = 0;
+    words.forEach((w) => {
+      if (/^\s+$/.test(w)) {
+        span.appendChild(document.createTextNode(' '));
+        return;
+      }
+      const wrap = document.createElement('span');
+      wrap.className = 'reveal-word';
+      for (const ch of w) {
+        const c = document.createElement('span');
+        c.className = 'char';
+        c.textContent = ch;
+        c.style.setProperty('--i', idx++);
+        wrap.appendChild(c);
+      }
+      span.appendChild(wrap);
+    });
+  });
 }
 
 function applyLang(lang) {
@@ -191,8 +348,13 @@ function applyLang(lang) {
     }
   });
 
+  // Re-wrap hero characters after i18n substitution so the animation replays
+  splitHeroHeading();
+
   document.querySelectorAll('.lang-toggle button').forEach((button) => {
-    button.classList.toggle('active', button.dataset.lang === resolvedLang);
+    const isActive = button.dataset.lang === resolvedLang;
+    button.classList.toggle('active', isActive);
+    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
   });
 
   try {
@@ -219,6 +381,47 @@ function initLanguageSwitcher() {
   applyLang(getInitialLang());
 }
 
+/* Mobile burger menu toggle */
+function initBurgerMenu() {
+  const burger = document.querySelector('.nav-burger');
+  const menu = document.getElementById('primary-menu');
+  if (!burger || !menu) return;
+
+  const close = () => {
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Ouvrir le menu');
+  };
+  const open = () => {
+    burger.setAttribute('aria-expanded', 'true');
+    burger.setAttribute('aria-label', 'Fermer le menu');
+  };
+
+  burger.addEventListener('click', () => {
+    const expanded = burger.getAttribute('aria-expanded') === 'true';
+    expanded ? close() : open();
+  });
+
+  // Close menu when a nav link is clicked
+  menu.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      if (burger.getAttribute('aria-expanded') === 'true') close();
+    });
+  });
+
+  // Close on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820) close();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+      close();
+      burger.focus();
+    }
+  });
+}
+
 function initScrollReveal() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -232,7 +435,123 @@ function initScrollReveal() {
     { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
   );
 
-  document.querySelectorAll('.reveal, .t-item').forEach((el) => observer.observe(el));
+  const selectors = [
+    '.reveal',
+    '.t-item',
+    '.projects-grid',
+    '.cap-stack',
+    '.cap-layout',
+    '.skills-wrap',
+    '.stagger',
+    '.skill-group',
+    '.learn-grid',
+    '.learn-card',
+    '.learn-sources'
+  ];
+  document.querySelectorAll(selectors.join(',')).forEach((el) => observer.observe(el));
+}
+
+/* Track scroll progress per section as a CSS custom prop (0 → 1). */
+function initSectionProgress() {
+  const sections = Array.from(document.querySelectorAll('main section, .timeline'));
+  if (!sections.length) return;
+
+  const update = () => {
+    const vh = window.innerHeight;
+    sections.forEach((sec) => {
+      const r = sec.getBoundingClientRect();
+      const total = r.height + vh;
+      const passed = Math.min(total, Math.max(0, vh - r.top));
+      const prog = total ? passed / total : 0;
+      const entry = Math.min(1, Math.max(0, (vh - r.top) / vh));
+      const exit = Math.min(1, Math.max(0, -r.top / r.height));
+      sec.style.setProperty('--section-progress', prog.toFixed(3));
+      sec.style.setProperty('--section-entry', entry.toFixed(3));
+      sec.style.setProperty('--section-exit', exit.toFixed(3));
+    });
+  };
+
+  let raf = false;
+  const onScroll = () => {
+    if (raf) return;
+    raf = true;
+    requestAnimationFrame(() => {
+      update();
+      raf = false;
+    });
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+}
+
+/* Magnetic buttons — pull toward the cursor a few px */
+function initMagnetic() {
+  const strength = 16;
+  document.querySelectorAll('.magnetic').forEach((el) => {
+    el.addEventListener('pointermove', (e) => {
+      const r = el.getBoundingClientRect();
+      const relX = (e.clientX - r.left) / r.width - 0.5;
+      const relY = (e.clientY - r.top) / r.height - 0.5;
+      el.style.setProperty('--mag-x', `${(relX * strength).toFixed(2)}px`);
+      el.style.setProperty('--mag-y', `${(relY * strength).toFixed(2)}px`);
+      el.style.setProperty('--mag-lift', '-2px');
+    });
+    el.addEventListener('pointerleave', () => {
+      el.style.setProperty('--mag-x', '0px');
+      el.style.setProperty('--mag-y', '0px');
+      el.style.setProperty('--mag-lift', '0px');
+    });
+  });
+}
+
+/* Custom cursor (desktop only) */
+function initCustomCursor() {
+  const isCoarse = window.matchMedia('(pointer: coarse)').matches;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (isCoarse || reduced) return;
+
+  document.documentElement.classList.add('has-custom-cursor');
+
+  window.addEventListener('pointermove', (e) => {
+    document.documentElement.style.setProperty('--cursor-x', `${e.clientX}px`);
+    document.documentElement.style.setProperty('--cursor-y', `${e.clientY}px`);
+  }, { passive: true });
+
+  const growTargets = 'a, button, .project, .cap-card, .cap-feature, .skill-group, .learn-card, .sk-chip';
+  document.addEventListener('pointerover', (e) => {
+    if (e.target.closest && e.target.closest(growTargets)) {
+      document.documentElement.style.setProperty('--r-scale', '1.6');
+      document.documentElement.style.setProperty('--c-scale', '0.4');
+    }
+  });
+  document.addEventListener('pointerout', (e) => {
+    if (e.target.closest && e.target.closest(growTargets)) {
+      document.documentElement.style.setProperty('--r-scale', '1');
+      document.documentElement.style.setProperty('--c-scale', '1');
+    }
+  });
+}
+
+/* Contact card 3D tilt */
+function initContactTilt() {
+  const card = document.querySelector('.contact-inner');
+  if (!card) return;
+  const box = card.parentElement;
+  if (!box) return;
+
+  box.addEventListener('pointermove', (e) => {
+    const r = card.getBoundingClientRect();
+    const relX = (e.clientX - r.left) / r.width - 0.5;
+    const relY = (e.clientY - r.top) / r.height - 0.5;
+    card.style.setProperty('--ctiltY', `${(relX * 6).toFixed(2)}deg`);
+    card.style.setProperty('--ctiltX', `${(-relY * 5).toFixed(2)}deg`);
+  });
+  box.addEventListener('pointerleave', () => {
+    card.style.setProperty('--ctiltX', '0deg');
+    card.style.setProperty('--ctiltY', '0deg');
+  });
 }
 
 function initParallaxAndRail() {
@@ -281,6 +600,8 @@ function initParallaxAndRail() {
         navEl.style.borderBottomColor = `rgba(43,37,35,${navBorderAlpha})`;
       }
 
+      document.documentElement.classList.toggle('is-scrolled', scrollY > 24);
+
       updateRailActive(scrollY);
 
       blobs.forEach((blob) => {
@@ -313,20 +634,20 @@ function initPointerGlow() {
 
 function initProjectCards() {
   document.querySelectorAll('.project').forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
+    card.addEventListener('pointermove', (e) => {
       const r = card.getBoundingClientRect();
       const relX = (e.clientX - r.left) / r.width;
       const relY = (e.clientY - r.top) / r.height;
-      card.style.setProperty('--mx', `${relX * 100}%`);
-      card.style.setProperty('--my', `${relY * 100}%`);
+      card.style.setProperty('--mx', `${(relX * 100).toFixed(1)}%`);
+      card.style.setProperty('--my', `${(relY * 100).toFixed(1)}%`);
 
-      const tiltY = (relX - 0.5) * 7;
-      const tiltX = (0.5 - relY) * 6;
+      const tiltY = (relX - 0.5) * 12;
+      const tiltX = (0.5 - relY) * 10;
       card.style.setProperty('--tiltY', `${tiltY.toFixed(2)}deg`);
       card.style.setProperty('--tiltX', `${tiltX.toFixed(2)}deg`);
     });
 
-    card.addEventListener('mouseleave', () => {
+    card.addEventListener('pointerleave', () => {
       card.style.setProperty('--tiltY', '0deg');
       card.style.setProperty('--tiltX', '0deg');
     });
@@ -334,7 +655,11 @@ function initProjectCards() {
 }
 
 initLanguageSwitcher();
+initBurgerMenu();
 initScrollReveal();
+initSectionProgress();
 initParallaxAndRail();
 initPointerGlow();
 initProjectCards();
+initMagnetic();
+initCusto

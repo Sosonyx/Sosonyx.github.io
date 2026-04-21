@@ -3,14 +3,36 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ilies Hadj — Développeur junior</title>
-<meta name="description" content="Portfolio d'Ilies Hadj — développeur junior en formation à 42 Paris, avec un parcours en maintenance aéronautique et dans l'Armée de Terre." />
+<title>Ilies Hadj — Développeur C/C++ junior · 42 Paris</title>
+<meta name="description" content="Portfolio d'Ilies Hadj — développeur C/C++ en formation à 42 Paris, après cinq ans de sous-officier dans l'Armée de Terre. Systèmes, concurrence, bas niveau." />
+<meta name="author" content="Ilies Hadj" />
+<meta name="theme-color" content="#efe0cf" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ilies Hadj — Développeur C/C++ junior" />
+<meta property="og:description" content="Portfolio d'Ilies Hadj — ex sous-officier, aujourd'hui développeur en formation à 42 Paris. Systèmes, concurrence, bas niveau." />
+<meta property="og:image" content="ecole-42.jpeg" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ilies Hadj — Développeur C/C++ junior" />
+<meta name="twitter:description" content="Portfolio d'Ilies Hadj — 42 Paris. C/C++, systèmes, concurrence." />
+<meta name="twitter:image" content="ecole-42.jpeg" />
+
+<!-- Inline SVG favicon (monogram IH) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23efe0cf'/><text x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='600' text-anchor='middle' fill='%23b8745e'>IH</text></svg>" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+
+<!-- CUSTOM CURSOR (desktop) -->
+<div class="c-ring" aria-hidden="true"></div>
+<div class="c-cursor" aria-hidden="true"></div>
 
 <!-- PARALLAX BACKGROUND SCENE -->
 <div class="bg-scene" aria-hidden="true">
@@ -25,27 +47,32 @@
 
 <aside class="dynamic-rail" aria-hidden="true">
   <a href="#parcours" data-rail="parcours">01</a>
-  <a href="#apprendre" data-rail="apprendre">02</a>
+  <a href="#ecole42" data-rail="ecole42">02</a>
   <a href="#cap" data-rail="cap">03</a>
   <a href="#projets" data-rail="projets">04</a>
-  <a href="#skills" data-rail="skills">05</a>
-  <a href="#contact" data-rail="contact">06</a>
+  <a href="#apprendre" data-rail="apprendre">05</a>
+  <a href="#skills" data-rail="skills">06</a>
+  <a href="#contact" data-rail="contact">07</a>
   <div class="track"><div class="fill"></div></div>
 </aside>
 
 <!-- NAV -->
-<nav class="top">
+<nav class="top" aria-label="Navigation principale">
   <a href="#top" class="brand">Ilies <span>Hadj</span></a>
-  <ul>
+  <button class="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="primary-menu">
     <li><a href="#parcours" data-i18n="nav.parcours">Parcours</a></li>
-    <li><a href="#apprendre" data-i18n="nav.apprendre">Apprendre</a></li>
+    <li><a href="#ecole42" data-i18n="nav.ecole42">42</a></li>
     <li><a href="#cap" data-i18n="nav.cap">Cap</a></li>
     <li><a href="#projets" data-i18n="nav.projets">Projets</a></li>
+    <li><a href="#apprendre" data-i18n="nav.apprendre">Apprendre</a></li>
     <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
   </ul>
-  <div class="lang-toggle" role="tablist" aria-label="Language">
-    <button data-lang="fr" class="active" type="button">FR</button>
-    <button data-lang="en" type="button">EN</button>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button data-lang="fr" class="active" type="button" aria-pressed="true">FR</button>
+    <button data-lang="en" type="button" aria-pressed="false">EN</button>
   </div>
 </nav>
 
@@ -53,29 +80,40 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-chips">
+    <div class="hero-chip chip-1">C / C++</div>
+    <div class="hero-chip chip-2">42 Paris</div>
+    <div class="hero-chip chip-3">systèmes</div>
+  </div>
   <div class="hero-inner">
     <div class="hero-ribbon">
-      <span data-i18n="hero.ribbon">du terrain à l’apprentissage du code</span>
+      <span data-i18n="hero.ribbon">du terrain au code, sans raccourci</span>
     </div>
-    <div class="eyebrow" data-i18n="hero.eyebrow">Portfolio — 2026</div>
+    <div class="hero-top">
+      <div class="eyebrow" data-i18n="hero.eyebrow">Portfolio — 2026</div>
+      <div class="avail-badge is-available" role="status" data-status="available">
+        <span class="dot"></span>
+        <span class="avail-text" data-i18n="hero.avail">Open to work</span>
+      </div>
+    </div>
     <h1>
-      <span data-i18n="hero.line1">De la rigueur</span>
+      <span data-i18n="hero.line1">De la rigueur du terrain,</span>
       <br />
-      <span class="accent" data-i18n="hero.line2"> au service d’un apprentissage sérieux.</span>
+      <span class="accent" data-i18n="hero.line2">à la précision du code.</span>
     </h1>
     <p class="sub" data-i18n="hero.sub">
-      Ilies Hadj — développeur junior en formation à 42 Paris, avec un parcours en maintenance aéronautique puis dans l'Armée de Terre.
+      Ilies Hadj — développeur C/C++ en formation à 42 Paris, après cinq ans comme sous-officier dans l'Armée de Terre.
     </p>
     <p class="tagline" data-i18n="hero.tag">
-      Je travaille surtout sur C, C++ et les bases des systèmes. J’essaie de comprendre avant d’aller vite, et de garder des projets simples et propres.
+      Je travaille surtout sur C, C++ et les bases de la programmation système. J'essaie de comprendre avant d'aller vite, et de garder un code simple et lisible.
     </p>
     <a class="learn-link" href="https://42.fr/" target="_blank" rel="noopener" data-i18n="hero.42.link">Découvrir 42</a>
     <div class="cta-row">
-      <a href="#projets" class="btn btn-primary">
+      <a href="#projets" class="btn btn-primary magnetic">
         <span data-i18n="hero.cta.projects">Voir mes projets</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a href="#contact" class="btn btn-ghost">
+      <a href="#contact" class="btn btn-ghost magnetic">
         <span data-i18n="hero.cta.contact">Me contacter</span>
       </a>
     </div>
@@ -100,6 +138,20 @@
     <span>simple, useful, honest</span>
   </div>
 </div>
+<div class="motion-strip reverse" aria-hidden="true">
+  <div class="row">
+    <span>pipes · fork · execve</span>
+    <span><b>threads</b> mutex &amp; signals</span>
+    <span>http/1.1 · cgi · keep-alive</span>
+    <span>docker compose · volumes</span>
+    <span>rfc 7230 bedtime reading</span>
+    <span>pipes · fork · execve</span>
+    <span><b>threads</b> mutex &amp; signals</span>
+    <span>http/1.1 · cgi · keep-alive</span>
+    <span>docker compose · volumes</span>
+    <span>rfc 7230 bedtime reading</span>
+  </div>
+</div>
 
 <!-- PARCOURS -->
 <section id="parcours">
@@ -107,43 +159,43 @@
     <div class="section-head reveal">
       <div class="num">01 / <span data-i18n="parcours.num">Parcours</span></div>
       <h2>
-        <span data-i18n="parcours.title1">Un parcours</span>
-        <span class="italic" data-i18n="parcours.title2">pas tout à fait direct.</span>
+        <span data-i18n="parcours.title1">Deux expériences,</span>
+        <span class="italic" data-i18n="parcours.title2">une même exigence.</span>
       </h2>
       <p data-i18n="parcours.intro">
-        Mon parcours n’est pas linéaire : j’ai d’abord travaillé en maintenance aéronautique puis dans l’Armée de Terre. Ça m’a appris la rigueur, le travail d’équipe et le fait de rester calme quand il faut corriger vite.
+        Ce qui relie le terrain au code, c'est la même logique : comprendre avant d'agir, tenir dans la durée, ne pas prendre de raccourcis.
       </p>
     </div>
 
     <div class="timeline">
       <div class="t-item">
-        <div class="date" data-i18n="p.a.date">Avril 2025 - Actuellement</div>
+        <div class="date" data-i18n="p.a.date">Avril 2025 — aujourd'hui</div>
         <div>
           <h3 data-i18n="p.a.title">42 Paris — Formation au développement logiciel</h3>
           <p data-i18n="p.a.desc">
-            Apprentissage du C et du C++ à travers plusieurs projets : mémoire, concurrence, parsing, logique bas niveau. Je progresse encore beaucoup par essais, corrections et relectures.
+            Formation au C et au C++ : gestion mémoire, concurrence, parsing, programmation bas niveau. J'apprends projet par projet, en essayant d'écrire un code propre et de bien comprendre ce que je produis.
           </p>
         </div>
       </div>
 
       <div class="t-item">
-        <div class="date" data-i18n="p.b.date">Juin 2022 - Décembre 2022</div>
+        <div class="date" data-i18n="p.c.date">Mars 2020 — Mars 2025</div>
         <div>
-          <h3 data-i18n="p.b.title">Technicien de maintenance aéronautique</h3>
-          <div class="place" data-i18n="p.b.place">Centre de formation franco-allemand (CFA PTL TIGRE) — Faßberg, Allemagne</div>
-          <p data-i18n="p.b.desc">
-            Formation technique en maintenance aéronautique, dans un contexte international. J’y ai appris la précision et l’habitude de suivre une procédure propre.
-          </p>
-        </div>
-      </div>
-
-      <div class="t-item">
-        <div class="date" data-i18n="p.c.date">Mars 2020 - Mars 2025</div>
-        <div>
-          <h3 data-i18n="p.c.title">Sous-officier de l'Armée de Terre</h3>
+          <h3 data-i18n="p.c.title">Sous-officier — Armée de Terre</h3>
           <div class="place" data-i18n="p.c.place">École Nationale des Sous-Officiers d'Active — Saint-Maixent-l'École, France</div>
           <p data-i18n="p.c.desc">
-            Expérience de terrain centrée sur la discipline, la coordination et la prise de décision sous pression.
+            Cinq années d'encadrement opérationnel : conduite d'équipe, décision sous pression, coordination inter-services.
+          </p>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="date" data-i18n="p.b.date">Juin 2022 — Décembre 2022</div>
+        <div>
+          <h3 data-i18n="p.b.title">Spécialisation maintenance aéronautique</h3>
+          <div class="place" data-i18n="p.b.place">Centre de formation franco-allemand (CFA PTL TIGRE) — Faßberg, Allemagne · dans le cadre du service militaire</div>
+          <p data-i18n="p.b.desc">
+            Formation technique en maintenance aéronautique, dans un cadre militaire franco-allemand.
           </p>
         </div>
       </div>
@@ -151,10 +203,10 @@
       <div class="t-item">
         <div class="date" data-i18n="p.d.date">Juin 2019</div>
         <div>
-          <h3 data-i18n="p.d.title">Baccalauréat — Scientifique, spécialité mathématiques</h3>
+          <h3 data-i18n="p.d.title">Baccalauréat scientifique — spécialité mathématiques</h3>
           <div class="place" data-i18n="p.d.place">Lycée Privé Polyvalent La Trinité — Béziers, France</div>
           <p data-i18n="p.d.desc">
-            Baccalauréat scientifique avec une base solide en mathématiques, utile pour la suite.
+            Baccalauréat scientifique, spécialité mathématiques.
           </p>
         </div>
       </div>
@@ -164,36 +216,38 @@
 
 <div class="split-transition" aria-hidden="true"></div>
 
-<!-- APPRENDRE -->
-<section id="apprendre">
+<!-- 42 CHIFFRES -->
+<section id="ecole42">
   <div class="container">
     <div class="section-head reveal">
-      <div class="num">02 / <span data-i18n="app.num">Apprendre</span></div>
+      <div class="num">02 / <span data-i18n="s42.num">42 Paris</span></div>
       <h2>
-        <span data-i18n="app.title1">Apprendre</span>
-        <span class="italic" data-i18n="app.title2">à l’ère des outils d’IA.</span>
+        <span data-i18n="s42.title1">Une école</span>
+        <span class="italic" data-i18n="s42.title2">à part.</span>
       </h2>
-      <p data-i18n="app.intro">
-        J’essaie d’avancer simplement : comprendre d’abord, demander de l’aide quand c’est utile, et éviter d’aller trop vite sur ce que je ne maîtrise pas encore.
+      <p data-i18n="s42.intro">
+        Fondée en 2013 à Paris par Xavier Niel, 42 s'est exportée dans le monde entier. Pas de cours magistraux, pas de professeurs — l'apprentissage se construit par les projets et entre pairs.
       </p>
     </div>
-
-    <blockquote class="reflect reveal" cite="https://www.media.mit.edu/publications/your-brain-on-chatgpt/">
-      <p data-i18n="app.q1">
-        Je ne veux pas la traiter comme un raccourci. Des travaux du MIT Media Lab montrent qu’un usage passif peut réduire l’engagement cognitif, et une étude Microsoft &amp; Carnegie Mellon rappelle aussi qu’une confiance excessive peut affaiblir l’esprit critique.
-      </p>
-      <p data-i18n="app.q2">
-        Dans mon cas, l’IA me sert surtout à vérifier une idée, relire une logique ou débloquer un point précis. Si je ne comprends plus ce que je fais, je ralentis et je reprends depuis le début.
-      </p>
-      <p data-i18n="app.q3">
-        C’est moins spectaculaire, mais ça m’aide à apprendre pour de vrai.
-      </p>
-      <div class="sources">
-        <span data-i18n="app.src.label">Références</span> ·
-        <a href="https://www.media.mit.edu/publications/your-brain-on-chatgpt/" target="_blank" rel="noopener">Kosmyna et al., MIT Media Lab (2025)</a> ·
-        <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/" target="_blank" rel="noopener">Lee et al., Microsoft &amp; Carnegie Mellon (2025)</a>
+    <div class="school42-stats reveal">
+      <div class="s42-stat">
+        <div class="s42-num" data-i18n="s42.stat1.num">50+</div>
+        <div class="s42-label" data-i18n="s42.stat1.label">campus dans le monde</div>
       </div>
-    </blockquote>
+      <div class="s42-stat">
+        <div class="s42-num" data-i18n="s42.stat2.num">170k+</div>
+        <div class="s42-label" data-i18n="s42.stat2.label">apprenants formés depuis 2013</div>
+      </div>
+      <div class="s42-stat">
+        <div class="s42-num" data-i18n="s42.stat3.num">0</div>
+        <div class="s42-label" data-i18n="s42.stat3.label">professeur — pair à pair</div>
+      </div>
+      <div class="s42-stat">
+        <div class="s42-num" data-i18n="s42.stat4.num">Bac+5</div>
+        <div class="s42-label" data-i18n="s42.stat4.label">certification RNCP reconnue par l'État</div>
+      </div>
+    </div>
+    <p class="s42-note reveal" data-i18n="s42.note">Admissions sur test (La Piscine), sans condition de diplôme. Gratuit.</p>
   </div>
 </section>
 
@@ -205,41 +259,41 @@
     <div class="section-head reveal">
       <div class="num">03 / <span data-i18n="cap.num">Cap</span></div>
       <h2>
-        <span data-i18n="cap.title1">RNCP 39774</span>
-        <span class="italic" data-i18n="cap.title2">la finalité de ma formation.</span>
+        <span data-i18n="cap.title1">Spécialisation</span>
+        <span class="italic" data-i18n="cap.title2">IA &amp; data.</span>
       </h2>
       <p data-i18n="cap.intro">
-        La certification <strong>RNCP 39774</strong> est la finalité de ma formation. Elle valide un niveau bac +5.
+        Mon cursus à 42 se prolonge par une spécialisation en intelligence artificielle et data science, certifiée <strong>RNCP 39774</strong> (niveau bac +5).
       </p>
     </div>
 
     <div class="cap-layout reveal">
       <article class="cap-feature">
         <div class="cap-badge" data-i18n="cap.badge">Cursus de spécialisation</div>
-        <h3 data-i18n="cap.feature.h">La finalité de ma formation</h3>
+        <h3 data-i18n="cap.feature.h">Des systèmes bas niveau à l'IA appliquée.</h3>
         <p data-i18n="cap.feature.p">
-          Je vise le RNCP 39774 comme aboutissement de ma formation, dans un cursus structuré.
+          Après les bases en C/C++ et en programmation système, je m'oriente vers des projets qui relient machine learning, préparation de données et intégration d'IA, de la théorie au déploiement.
         </p>
-        <a class="cap-link" href="https://www.francecompetences.fr/recherche/rncp/39774/" target="_blank" rel="noopener" data-i18n="cap.link">Voir la certification RNCP 39774</a>
+        <a class="cap-link magnetic" href="https://www.francecompetences.fr/recherche/rncp/39774/" target="_blank" rel="noopener" data-i18n="cap.link">Détail de la certification RNCP 39774</a>
       </article>
 
       <div class="cap-stack">
         <article class="cap-card">
-          <h4 data-i18n="cap.card1.h">Dans mon cursus de spécialisation</h4>
+          <h4 data-i18n="cap.card1.h">Piliers du cursus</h4>
           <p data-i18n="cap.card1.p">
-            Je vais faire des projets qui relient ML, data et intégration d’IA, avec une progression simple et concrète.
+            ML, pipelines de données et intégration de modèles dans des applications concrètes, au fil de projets progressifs et évalués.
           </p>
         </article>
         <article class="cap-card">
           <h4 data-i18n="cap.card2.h">Leaffliction</h4>
           <p data-i18n="cap.card2.p">
-            Un projet de classification d’images pour travailler la préparation des données et l’entraînement d’un premier modèle.
+            Classification d'images par réseau convolutif : préparation du dataset, augmentation, entraînement et évaluation d'un modèle de vision.
           </p>
         </article>
         <article class="cap-card">
           <h4 data-i18n="cap.card3.h">Multilayer Perceptron</h4>
           <p data-i18n="cap.card3.p">
-            Un réseau de neurones simple pour comprendre l’apprentissage supervisé et les bases de l’optimisation.
+            Réseau de neurones construit from scratch : forward pass, backprop, descente de gradient, pour comprendre l'optimisation avant d'utiliser les frameworks.
           </p>
         </article>
       </div>
@@ -259,32 +313,70 @@
         <span class="italic" data-i18n="pr.title2">j’ai construit.</span>
       </h2>
       <p data-i18n="pr.intro">
-        Quelques projets de 42 qui m’ont surtout appris à mieux comprendre le C, les systèmes et les bases du web.
+        Quelques projets de 42 sur lesquels je travaille actuellement : systèmes, concurrence, HTTP, conteneurs.
       </p>
     </div>
 
     <div class="projects-grid">
 
       <a href="https://github.com/Sosonyx/Webserv" target="_blank" rel="noopener" class="project">
-          <div class="p-head">
+        <div class="p-mockup mockup-webserv">
+          <div class="term-head" data-title="webserv ~ /"></div>
+          <div class="term-body">
+            <span class="term-line"><span class="c-prompt">$</span> <span class="c-cmd">./webserv</span> <span class="c-meta">conf/default.conf</span></span>
+            <span class="term-line"><span class="c-meta">[INFO]</span> <span class="c-ok">listening on</span> <span class="c-acc">:8080</span></span>
+            <span class="term-line"><span class="c-meta">&gt;</span> GET /index.html <span class="c-ok">200 OK</span><span class="term-cursor"></span></span>
+          </div>
+        </div>
+        <div class="p-head">
           <h3>Webserv</h3>
           <span class="stack">C++ · HTTP/1.1</span>
         </div>
         <p data-i18n="pr.webserv">
-          Un serveur HTTP/1.1 écrit en C++ : GET, POST, DELETE, CGI et gestion de plusieurs clients. C’est un projet qui m’a surtout appris à mieux lire la RFC et à garder un code propre malgré la complexité.
+          Serveur HTTP/1.1 en C++ : GET, POST, DELETE, CGI, gestion de plusieurs clients. Un projet d'équipe qui m'a beaucoup appris sur la lecture des RFC et sur l'organisation d'un code qui reste lisible malgré la complexité.
         </p>
+        <div class="p-concepts">
+          <div class="p-concept">
+            <strong data-i18n="pr.webserv.c1.h">Trello board</strong>
+            <span data-i18n="pr.webserv.c1.p">Organisation en sprints et tickets partagés entre les membres de l'équipe.</span>
+          </div>
+          <div class="p-concept">
+            <strong data-i18n="pr.webserv.c2.h">State machine</strong>
+            <span data-i18n="pr.webserv.c2.p">Les connexions HTTP sont gérées via une machine à états claire et explicite.</span>
+          </div>
+          <div class="p-concept">
+            <strong data-i18n="pr.webserv.c3.h">Complexité cyclomatique</strong>
+            <span data-i18n="pr.webserv.c3.p">Accord d'équipe pour limiter la complexité par fonction et garder le code maintenable.</span>
+          </div>
+          <div class="p-concept">
+            <strong data-i18n="pr.webserv.c4.h">Scalabilité</strong>
+            <span data-i18n="pr.webserv.c4.p">Architecture pensée pour intégrer de nouveaux modules sans tout reconstruire.</span>
+          </div>
+        </div>
         <div class="p-foot"><span data-i18n="pr.see">Voir sur GitHub</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
       </a>
 
       <a href="https://github.com/Sosonyx/Inception" target="_blank" rel="noopener" class="project">
-          <div class="p-head">
+        <div class="p-mockup mockup-inception">
+          <div class="stack">
+            <div class="ctn nginx">nginx · tls</div>
+            <div class="ctn wp">wordpress · php-fpm</div>
+            <div class="ctn db">mariadb · volumes</div>
+          </div>
+          <div class="ports">
+            <span>:443</span>
+            <span>:9000</span>
+            <span>:3306</span>
+          </div>
+        </div>
+        <div class="p-head">
           <h3>Inception</h3>
           <span class="stack">Docker · Nginx · MariaDB</span>
         </div>
         <p data-i18n="pr.inception">
-          Mise en place de services (Nginx, WordPress, MariaDB) avec Docker. J’y ai appris à configurer un environnement complet, à comprendre les volumes et à gérer le réseau.
+          Infrastructure conteneurisée : Nginx (TLS), WordPress (PHP-FPM) et MariaDB orchestrés via Docker Compose. Volumes persistants, réseau isolé, images reproductibles.
         </p>
         <div class="p-foot"><span data-i18n="pr.see">Voir sur GitHub</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -292,25 +384,54 @@
       </a>
 
       <a href="https://github.com/Sosonyx/Minishell" target="_blank" rel="noopener" class="project">
-          <div class="p-head">
+        <div class="p-mockup mockup-minishell">
+          <div class="term-head" data-title="minishell"></div>
+          <div class="term-body">
+            <span class="term-line"><span class="c-prompt">minishell$</span> <span class="c-cmd">ls</span> -la | <span class="c-cmd">grep</span> <span class="c-acc">.c</span> &gt; <span class="c-acc">out.txt</span></span>
+            <span class="term-line"><span class="c-meta">[pipe]</span> fork → dup2 → execve <span class="c-ok">✓</span></span>
+            <span class="term-line"><span class="c-prompt">minishell$</span> <span class="c-warn">^C</span><span class="term-cursor"></span></span>
+          </div>
+        </div>
+        <div class="p-head">
           <h3>Minishell</h3>
           <span class="stack">C · Parsing · Process</span>
         </div>
         <p data-i18n="pr.minishell">
-          Un shell proche de bash : parsing, redirections, pipes, variables d’environnement et signaux. Un bon exercice pour comprendre comment un système Unix se comporte.
+          Shell Unix en C : parsing, redirections, pipes, expansion de variables, gestion des signaux et builtins. Un bon exercice pour se familiariser avec les appels système et le cycle de vie des processus.
         </p>
+        <div class="p-concepts single">
+          <div class="p-concept">
+            <strong data-i18n="pr.minishell.c1.h">AST</strong>
+            <span data-i18n="pr.minishell.c1.p">Le parsing construit un arbre syntaxique abstrait qui représente la commande avant son exécution.</span>
+          </div>
+        </div>
         <div class="p-foot"><span data-i18n="pr.see">Voir sur GitHub</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
       </a>
 
       <a href="https://github.com/Sosonyx/Philosophers" target="_blank" rel="noopener" class="project">
-          <div class="p-head">
+        <div class="p-mockup mockup-philo">
+          <div class="ring">
+            <span class="philo eating" style="--a:0deg"></span>
+            <span class="philo" style="--a:72deg"></span>
+            <span class="philo eating" style="--a:144deg"></span>
+            <span class="philo" style="--a:216deg"></span>
+            <span class="philo" style="--a:288deg"></span>
+            <span class="fork" style="--a:36deg"></span>
+            <span class="fork" style="--a:108deg"></span>
+            <span class="fork" style="--a:180deg"></span>
+            <span class="fork" style="--a:252deg"></span>
+            <span class="fork" style="--a:324deg"></span>
+          </div>
+          <span class="label">threads · mutex</span>
+        </div>
+        <div class="p-head">
           <h3>Philosophers</h3>
           <span class="stack">C · Threads · Mutex</span>
         </div>
         <p data-i18n="pr.philo">
-          Le dîner des philosophes en C avec threads et mutex. Le but ici était surtout de comprendre la synchronisation et d’éviter les blocages.
+          Le problème du dîner des philosophes en C, avec threads et mutex. Un bon support pour s'entraîner à la synchronisation et éviter les blocages.
         </p>
         <div class="p-foot"><span data-i18n="pr.see">Voir sur GitHub</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -321,41 +442,146 @@
   </div>
 </section>
 
+<div class="split-transition" aria-hidden="true"></div>
+
+<!-- APPRENDRE -->
+<section id="apprendre">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="num">05 / <span data-i18n="app.num">Apprendre</span></div>
+      <h2>
+        <span data-i18n="app.title1">Ma manière</span>
+        <span class="italic" data-i18n="app.title2">d'apprendre.</span>
+      </h2>
+      <p data-i18n="app.intro">
+        À 42, on apprend par la pratique et en allant chercher les réponses. L'IA est un outil puissant et je l'utilise régulièrement ; pendant la phase d'apprentissage, j'essaie simplement de faire attention à la façon dont je m'en sers.
+      </p>
+    </div>
+
+    <div class="learn-grid reveal">
+      <article class="learn-card">
+        <div class="learn-num">01</div>
+        <h4 data-i18n="app.q1.h">L'IA, surtout pour comprendre.</h4>
+        <p data-i18n="app.q1.p">
+          Je m'en sers pour reformuler un concept, comparer des approches ou décoder un message d'erreur. Sur les sujets que je suis en train d'apprendre, je préfère écrire le code moi-même, pour que l'apprentissage reste actif.
+        </p>
+      </article>
+      <article class="learn-card">
+        <div class="learn-num">02</div>
+        <h4 data-i18n="app.q2.h">Croiser avec la doc.</h4>
+        <p data-i18n="app.q2.p">
+          RFC, <em>man</em> pages, documentation officielle : j'y retourne régulièrement. L'IA répond vite, la doc répond juste, et je m'appuie sur les deux selon ce que je cherche.
+        </p>
+      </article>
+      <article class="learn-card">
+        <div class="learn-num">03</div>
+        <h4 data-i18n="app.q3.h">Comprendre ce que je commit.</h4>
+        <p data-i18n="app.q3.p">
+          J'essaie de pouvoir expliquer chaque ligne de mon code. Quand j'hésite sur une suggestion, je relis la doc ou je prends le temps de comprendre comment elle fonctionne avant de l'intégrer.
+        </p>
+      </article>
+    </div>
+
+    <div class="learn-sources reveal">
+      <span class="ls-label" data-i18n="app.sources.label">Mes références au quotidien :</span>
+      <span class="ls-chip">man</span>
+      <span class="ls-chip">RFC 7230</span>
+      <span class="ls-chip">cppreference</span>
+      <span class="ls-chip">POSIX.1-2017</span>
+      <span class="ls-chip">LKD &amp; TLPI</span>
+      <span class="ls-chip">Stack Overflow</span>
+    </div>
+  </div>
+</section>
+
 <!-- COMPÉTENCES -->
 <section id="skills">
   <div class="container">
     <div class="section-head reveal">
-      <div class="num">05 / <span data-i18n="sk.num">Compétences</span></div>
+      <div class="num">06 / <span data-i18n="sk.num">Compétences</span></div>
       <h2>
         <span data-i18n="sk.title1">Des outils,</span>
         <span class="italic" data-i18n="sk.title2">et une manière de travailler.</span>
       </h2>
     </div>
 
-    <div class="skills-wrap">
+    <div class="skills-wrap stagger">
       <div class="skill-group reveal">
-        <h4 data-i18n="sk.lang.h">Langages</h4>
-        <p>C · C++ · Python · HTML/CSS</p>
+        <div class="sg-head">
+          <h4 data-i18n="sk.lang.h">Langages</h4>
+          <span class="sg-tag" data-i18n="sk.lang.tag">noyau</span>
+        </div>
+        <ul class="sk-chips">
+          <li class="sk-chip tier-core">C<span class="lvl" data-i18n="sk.lvl.solid">solide</span></li>
+          <li class="sk-chip tier-core">C++<span class="lvl" data-i18n="sk.lvl.solid">solide</span></li>
+          <li class="sk-chip tier-learn">Python<span class="lvl" data-i18n="sk.lvl.learn">en cours</span></li>
+          <li class="sk-chip tier-use">HTML / CSS<span class="lvl" data-i18n="sk.lvl.use">utilisé</span></li>
+        </ul>
       </div>
+
       <div class="skill-group reveal">
-        <h4 data-i18n="sk.tools.h">Outils</h4>
-        <p>Docker · Git · Linux / Unix · VirtualBox</p>
+        <div class="sg-head">
+          <h4 data-i18n="sk.tools.h">Outils</h4>
+          <span class="sg-tag" data-i18n="sk.tools.tag">quotidien</span>
+        </div>
+        <ul class="sk-chips">
+          <li class="sk-chip tier-core">Git<span class="lvl" data-i18n="sk.lvl.daily">quotidien</span></li>
+          <li class="sk-chip tier-core">Linux / Unix<span class="lvl" data-i18n="sk.lvl.daily">quotidien</span></li>
+          <li class="sk-chip tier-use">Docker<span class="lvl" data-i18n="sk.lvl.use">utilisé</span></li>
+          <li class="sk-chip tier-use">VirtualBox<span class="lvl" data-i18n="sk.lvl.use">utilisé</span></li>
+        </ul>
       </div>
+
       <div class="skill-group reveal">
-        <h4 data-i18n="sk.core.h">Programmation &amp; architecture</h4>
-        <p data-i18n="sk.core.v">Algorithmes · gestion mémoire · concurrence · debugging</p>
+        <div class="sg-head">
+          <h4 data-i18n="sk.core.h">Programmation &amp; architecture</h4>
+          <span class="sg-tag" data-i18n="sk.core.tag">fondamentaux</span>
+        </div>
+        <ul class="sk-chips">
+          <li class="sk-chip" data-i18n="sk.core.c1">Gestion mémoire</li>
+          <li class="sk-chip" data-i18n="sk.core.c2">Concurrence &amp; threads</li>
+          <li class="sk-chip" data-i18n="sk.core.c3">Algorithmes &amp; structures</li>
+          <li class="sk-chip" data-i18n="sk.core.c4">Debugging (gdb, valgrind)</li>
+          <li class="sk-chip" data-i18n="sk.core.c5">Parsing &amp; protocoles</li>
+        </ul>
       </div>
+
       <div class="skill-group reveal">
-        <h4 data-i18n="sk.soft.h">Qualités de travail</h4>
-        <p data-i18n="sk.soft.v">Autonomie · rigueur · curiosité · travail en équipe</p>
+        <div class="sg-head">
+          <h4 data-i18n="sk.soft.h">Qualités de travail</h4>
+          <span class="sg-tag" data-i18n="sk.soft.tag">posture</span>
+        </div>
+        <ul class="sk-chips">
+          <li class="sk-chip" data-i18n="sk.soft.c1">Autonomie</li>
+          <li class="sk-chip" data-i18n="sk.soft.c2">Rigueur opérationnelle</li>
+          <li class="sk-chip" data-i18n="sk.soft.c3">Curiosité technique</li>
+          <li class="sk-chip" data-i18n="sk.soft.c4">Travail en équipe</li>
+        </ul>
       </div>
+
       <div class="skill-group meta reveal">
-        <h4 data-i18n="sk.langs.h">Langues</h4>
-        <p data-i18n="sk.langs.v">Français (natif) · Anglais B2 — TOEIC 890 · Espagnol A2</p>
+        <div class="sg-head">
+          <h4 data-i18n="sk.langs.h">Langues</h4>
+          <span class="sg-tag" data-i18n="sk.langs.tag">à l'écrit &amp; à l'oral</span>
+        </div>
+        <ul class="sk-chips">
+          <li class="sk-chip"><span data-i18n="sk.langs.fr">Français</span><span class="lvl" data-i18n="sk.langs.fr.lvl">natif</span></li>
+          <li class="sk-chip"><span data-i18n="sk.langs.en">Anglais</span><span class="lvl">B2 · TOEIC 890</span></li>
+          <li class="sk-chip"><span data-i18n="sk.langs.es">Espagnol</span><span class="lvl">A2</span></li>
+        </ul>
       </div>
+
       <div class="skill-group meta reveal">
-        <h4 data-i18n="sk.other.h">À côté du code</h4>
-        <p data-i18n="sk.other.v">Escalade · piano · judo (ceinture marron) · permis B</p>
+        <div class="sg-head">
+          <h4 data-i18n="sk.other.h">À côté du code</h4>
+          <span class="sg-tag" data-i18n="sk.other.tag">équilibre</span>
+        </div>
+        <ul class="sk-chips">
+          <li class="sk-chip" data-i18n="sk.other.c1">Escalade</li>
+          <li class="sk-chip" data-i18n="sk.other.c2">Piano</li>
+          <li class="sk-chip" data-i18n="sk.other.c3">Judo · ceinture marron</li>
+          <li class="sk-chip" data-i18n="sk.other.c4">Permis B</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -365,7 +591,7 @@
 <section id="contact" class="contact">
   <div class="container">
     <div class="contact-inner reveal">
-      <div class="num">06 / <span data-i18n="ct.num">Contact</span></div>
+      <div class="num">07 / <span data-i18n="ct.num">Contact</span></div>
       <h2>
         <span data-i18n="ct.title1">Un poste,</span>
         <span class="italic" data-i18n="ct.title2">un stage, <span class="accent">un café ?</span></span>
@@ -373,6 +599,12 @@
       <p class="lead" data-i18n="ct.lead">
         Je cherche un premier poste ou un stage où je pourrai apprendre sérieusement et contribuer concrètement. Si mon profil vous semble intéressant, écrivez-moi.
       </p>
+      <div class="contact-cta">
+        <a href="ihadj.pdf" download class="btn btn-primary magnetic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          <span data-i18n="ct.cta.cv">Télécharger mon CV</span>
+        </a>
+      </div>
       <div class="contact-links">
         <a href="mailto:iliesvive3432@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
@@ -396,9 +628,10 @@
 <footer>
   <span>© 2026 — Ilies Hadj</span>
   <span class="sep">·</span>
-  <span data-i18n="foot">Fait à la main, à Paris.</span>
+  <span data-i18n="foot">Paris.</span>
 </footer>
 
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>
+                            
