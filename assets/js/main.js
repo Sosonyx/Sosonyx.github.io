@@ -654,6 +654,226 @@ function initProjectCards() {
   });
 }
 
+/* -------------------- INNOVATIVE EFFECTS -------------------- */
+
+/* Text-beam cursor: when hovering over reading text, the custom cursor
+   morphs into a vertical I-beam. Adds a tiny state to --c-scale / --r-scale. */
+function initTextBarCursor() {
+  const isCoarse = window.matchMedia('(pointer: coarse)').matches;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (isCoarse || reduced) return;
+
+  const textTargets = 'p, h1, h2, h3, .sub, .tagline, .t-item p, .learn-card p, .place, .s42-label';
+  document.addEventListener('pointerover', (e) => {
+    if (e.target.closest && e.target.closest(textTargets) && !e.target.closest('a, button, .btn, .project, .cap-card')) {
+      document.documentElement.classList.add('cursor-text');
+    }
+  });
+  document.addEventListener('pointerout', (e) => {
+    if (e.target.closest && e.target.closest(textTargets)) {
+      document.documentElement.classList.remove('cursor-text');
+    }
+  });
+}
+
+/* Click ripple — radial pulse from the click point on buttons / interactive cards. */
+function initClickRipple() {
+  const rippleTargets = '.btn, .magnetic, .project, .cap-card, .learn-card';
+  document.addEventListener('pointerdown', (e) => {
+    const el = e.target.closest && e.target.closest(rippleTargets);
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const r = document.createElement('span');
+    r.className = 'ripple';
+    const size = Math.max(rect.width, rect.height) * 1.4;
+    r.style.width = r.style.height = `${size}px`;
+    r.style.left = `${e.clientX - rect.left - size / 2}px`;
+    r.style.top = `${e.clientY - rect.top - size / 2}px`;
+    // Ensure we can position absolutely within the target
+    const prevPos = getComputedStyle(el).position;
+    if (prevPos === 'static') el.style.position = 'relative';
+    const prevOverflow = getComputedStyle(el).overflow;
+    if (prevOverflow === 'visible') el.dataset.rippleOverflow = '1';
+    el.appendChild(r);
+    r.addEventListener('animationend', () => r.remove());
+  });
+}
+
+/* Count-up animation for the 42 stats.
+   Parses a number from the text ("50+", "170k+", "0") and counts up when visible. */
+function initCountUp() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const els = document.querySelectorAll('.s42-num');
+  if (!els.length) return;
+
+  const parse = (raw) => {
+    const trimmed = (raw || '').trim();
+    // Match number + optional k/K + optional suffix like +
+    const m = trimmed.match(/^([0-9]+(?:\.[0-9]+)?)([kKmM]?)([+]?)$/);
+    if (!m) return null;
+    const base = parseFloat(m[1]);
+    const mult = m[2].toLowerCase() === 'k' ? 1000 : m[2].toLowerCase() === 'm' ? 1000000 : 1;
+    return { target: base * mult, unit: m[2], plus: m[3] };
+  };
+
+  const format = (value, info) => {
+    if (info.unit) {
+      // e.g. 170k+
+      const rounded = info.unit.toLowerCase() === 'k'
+        ? (value / 1000).toFixed(0) + 'k'
+        : (value / 1000000).toFixed(0) + 'm';
+      return rounded + info.plus;
+    }
+    return Math.round(value).toString() + info.plus;
+  };
+
+  const animate = (el) => {
+    const info = parse(el.textContent);
+    if (!info) return;
+    if (reduced || info.target === 0) return; // keep "0" static
+    const duration = 1600;
+    const start = performance.now();
+    const original = el.textContent;
+    el.dataset.countOriginal = original;
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const current = info.target * eased;
+      el.textContent = format(current, info);
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = original;
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animate(entry.target);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.45 });
+
+  els.forEach((el) => io.observe(el));
+}
+
+/* Text scramble — section eyebrow numbers ("01", "02"…) flicker through random
+   characters before settling when they enter the viewport. Subtle, not noisy. */
+function initTextScramble() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) return;
+  const charset = '!<>-_\\/[]{}—=+*^?#01';
+
+  const scramble = (el) => {
+    const final = el.textContent;
+    const length = final.length;
+    const duration = 700;
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      let out = '';
+      for (let i = 0; i < length; i++) {
+        const progress = Math.min(1, Math.max(0, (t * length - i) / 1.2));
+        if (progress >= 1) out += final[i];
+        else if (final[i] === ' ' || final[i] === '/') out += final[i];
+        else out += charset[Math.floor(Math.random() * charset.length)];
+      }
+      el.textContent = out;
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = final;
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const targets = document.querySelectorAll('.section-head .num');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        scramble(entry.target);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  targets.forEach((el) => io.observe(el));
+}
+
+/* Hero chips — subtle parallax that tracks the cursor (desktop only). */
+function initHeroChipParallax() {
+  const isCoarse = window.matchMedia('(pointer: coarse)').matches;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (isCoarse || reduced) return;
+  const hero = document.querySelector('.hero');
+  const chips = document.querySelectorAll('.hero-chip');
+  if (!hero || !chips.length) return;
+
+  hero.addEventListener('pointermove', (e) => {
+    const r = hero.getBoundingClientRect();
+    const relX = (e.clientX - r.left) / r.width - 0.5;
+    const relY = (e.clientY - r.top) / r.height - 0.5;
+    chips.forEach((chip, i) => {
+      const strength = 18 + i * 6;
+      chip.style.setProperty('--chip-dx', `${(relX * strength).toFixed(2)}px`);
+      chip.style.setProperty('--chip-dy', `${(relY * strength).toFixed(2)}px`);
+    });
+  });
+  hero.addEventListener('pointerleave', () => {
+    chips.forEach((chip) => {
+      chip.style.setProperty('--chip-dx', '0px');
+      chip.style.setProperty('--chip-dy', '0px');
+    });
+  });
+}
+
+/* Marquee strip — pause the horizontal text ticker on hover. */
+function initMarqueePause() {
+  document.querySelectorAll('.motion-strip').forEach((strip) => {
+    strip.addEventListener('pointerenter', () => strip.classList.add('is-paused'));
+    strip.addEventListener('pointerleave', () => strip.classList.remove('is-paused'));
+  });
+}
+
+/* Konami-style easter egg: type "42" anywhere on the page to trigger a soft
+   confetti burst of tokens ('{', '}', '()', ';', '0x', 'void'). */
+function initCodeConfetti() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) return;
+  let buffer = '';
+  const tokens = ['{', '}', '( )', ';', '0x', 'void', '42', '&&', '||', '->'];
+
+  const burst = () => {
+    const layer = document.createElement('div');
+    layer.className = 'code-confetti';
+    for (let i = 0; i < 28; i++) {
+      const s = document.createElement('span');
+      s.textContent = tokens[Math.floor(Math.random() * tokens.length)];
+      const angle = Math.random() * Math.PI * 2;
+      const dist = 120 + Math.random() * 220;
+      s.style.setProperty('--dx', `${Math.cos(angle) * dist}px`);
+      s.style.setProperty('--dy', `${Math.sin(angle) * dist}px`);
+      s.style.setProperty('--rot', `${(Math.random() * 120 - 60).toFixed(0)}deg`);
+      s.style.setProperty('--dur', `${900 + Math.random() * 700}ms`);
+      s.style.fontSize = `${12 + Math.random() * 14}px`;
+      layer.appendChild(s);
+    }
+    document.body.appendChild(layer);
+    setTimeout(() => layer.remove(), 2000);
+  };
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === '4' || e.key === '2') {
+      buffer = (buffer + e.key).slice(-2);
+      if (buffer === '42') {
+        burst();
+        buffer = '';
+      }
+    } else {
+      buffer = '';
+    }
+  });
+}
+
+/* -------------------- BOOT -------------------- */
 initLanguageSwitcher();
 initBurgerMenu();
 initScrollReveal();
@@ -662,4 +882,12 @@ initParallaxAndRail();
 initPointerGlow();
 initProjectCards();
 initMagnetic();
-initCusto
+initCustomCursor();
+initContactTilt();
+initTextBarCursor();
+initClickRipple();
+initCountUp();
+initTextScramble();
+initHeroChipParallax();
+initMarqueePause();
+initCodeConfetti();
